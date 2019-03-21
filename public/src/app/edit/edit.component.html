@@ -1,0 +1,26 @@
+<div *ngIf='right==1'>
+    <h1>Edit Product</h1>
+    <p *ngIf='validations' style="color: red">
+        {{validations.message}}
+    </p>
+    <form (submit)='onedit()'>
+        <br> Title:
+        <input type="text" name="title" [(ngModel)]='one.title'>
+        <br>
+        <br> Price:
+        <input type="text" name="price" [(ngModel)]='one.price'>
+        <br>
+        <br> Image url:<input type="text" name="url" [(ngModel)]='one.url'>
+        <br>
+        <br>
+        <div>
+            <button class='btnu'>Edit</button>
+            <div class='btnd' (click)='deleteone()'>Delete</div>
+        </div>
+    </form>
+</div>
+<div *ngIf='right==0'>
+    <h1>ERROR:</h1>
+    <p>{{errors.message}}</p>
+    <button class='btn' [routerLink]="['/products','new']">Product Creation</button>
+</div>

@@ -1,0 +1,11 @@
+<h1>
+    Product List:</h1>
+<div *ngFor='let x of lists' style="display:inline-block;text-align: center;width:350px;border:1px solid black;margin:10px 30px;vertical-align: top;">
+    <img src='{{x.url}}' style="width:300px;">
+    <p style="font-size:20px;">{{x.title}}</p>
+    <p style="font-size:20px;">${{x.price}}</p>
+    <div>
+        <button class='btne' [routerLink]="['/products','edit',x._id]">Edit</button>
+        <div class='btnd' (click)='deleteone(x._id)'>Delete</div>
+    </div>
+</div>

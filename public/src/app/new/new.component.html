@@ -1,0 +1,19 @@
+<h1>Create a new Product</h1>
+<p *ngIf='validations' style="color: red">
+    {{validations.message}}
+</p>
+<form (submit)='onsubmit()'>
+    <br> Title:
+    <input type="text" name="title" [(ngModel)]='one.title'>
+    <br>
+    <br> Price:
+    <input type="text" name="price" [(ngModel)]='one.price'>
+    <br>
+    <br> Image url:<input type="text" name="url" [(ngModel)]='one.url'>
+    <br>
+    <br>
+    <div>
+        <button class='btncr'>Create</button>
+        <div class='btnc' [routerLink]="['/products']">Cancel</div>
+    </div>
+</form>

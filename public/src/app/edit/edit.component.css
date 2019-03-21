@@ -1,0 +1,21 @@
+.btnu {
+    display: inline-block;
+    width: 120px;
+    margin: 20px 25px;
+    color: aliceblue;
+    background-color: rgb(118, 230, 133);
+    border-radius: 8px;
+    font-family: cursive;
+    text-align: center;
+}
+
+.btnd {
+    display: inline-block;
+    width: 120px;
+    margin: 20px 25px;
+    color: aliceblue;
+    background-color: rgb(245, 183, 158);
+    border-radius: 8px;
+    font-family: cursive;
+    text-align: center;
+}
